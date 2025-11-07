@@ -1,3 +1,7 @@
-theme: jekyll-theme-minimal
 title: Open Ticketing
 description: Repository for open collaboration on ticketing APIs.
+theme: null
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
