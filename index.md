@@ -1,2 +1,2 @@
-* [Open Away Ticketing]({{ site.baseurl }}/open-away-ticketing.html)
-* [Kaizen Datafeeds]({{ site.baseurl }}/kaizen-datafeeds.html)
+<!-- * [Open Away Ticketing]({{ site.baseurl }}/open-away-ticketing.html)
+* [Datafeeds]({{ site.baseurl }}/datafeeds.html) -->
