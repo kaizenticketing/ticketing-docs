@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Kaizen Datafeeds
+title: Datafeeds
 ---
 
-# Kaizen Datafeeds
+# Datafeeds
 
 ## What is it?
 
@@ -162,17 +162,17 @@ Currently supported object types:
 
 For `objectType: "customer"` 
 
-* [Customer Schema Sample](https://github.com/kaizenticketing/ticketing/blob/3bb03c335fff9c234d995b715b17614228748cf7/docs/DEVELOPMENT/Designs/DataFeeds/Customer.Sample.json)
+* [Customer Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Customer.Sample.json)
 
 ### Order Object
 
 For `objectType: "order"` 
 
-* [Order Schema Sample](https://github.com/kaizenticketing/ticketing/blob/3bb03c335fff9c234d995b715b17614228748cf7/docs/DEVELOPMENT/Designs/DataFeeds/Order.Sample.json)
+* [Order Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Order.Sample.json)
 
 ### Product Object 
 
 For `objectType: "product"`
 
-* [Product Schema Sample](https://github.com/kaizenticketing/ticketing/blob/3bb03c335fff9c234d995b715b17614228748cf7/docs/DEVELOPMENT/Designs/DataFeeds/Product.Sample.json)
+* [Product Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Product.Sample.json)
 
