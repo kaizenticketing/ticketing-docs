@@ -1,0 +1,252 @@
+{
+	// Common fields
+	"id": "00000000-0000-0000-0000-000000000001",
+	"organisationId": "00000000-0000-0000-0000-000000000002",
+	"type": "Event",
+	"code": "EVT-001",
+	// TODO: ok with these being embedded?
+	"attractions": [
+		{
+			"id": "00000000-0000-0000-0000-000000000010",
+			"code": "ATTR-001",
+			"name": {
+				"en": "Main Attraction"
+			},
+			"partOf": [],
+			"type": "Performer"
+		}
+	],
+	"brand": {
+		"id": "00000000-0000-0000-0000-000000000020",
+		"slug": "brand-slug",
+		"name": {
+			"en": "Brand Name"
+		},
+		"description": {
+			"en": "Brand description"
+		},
+		"displayMode": "Default",
+		"isDiscoverable": true,
+		"rank": 1,
+		"badgeImageUrl": "https://example.com/brand-badge.jpg",
+		"bannerImageUrl": "https://example.com/brand-banner.jpg",
+		"redirectWhenSingleProduct": false
+	},
+	"tour": {
+		"id": "00000000-0000-0000-0000-000000000090",
+		"name": {
+			"en": "World Tour 2050"
+		}
+	},
+	"category": {
+		"id": "00000000-0000-0000-0000-000000000030",
+		"name": {
+			"en": "Category Name"
+		}
+	},
+	"name": {
+		"en": "Sample Product"
+	},
+	"description": {
+		"en": "Short description"
+	},
+	"detailedDescription": {
+		"en": "Detailed description"
+	},
+	"postPurchaseDescription": {
+		"en": "After purchase info"
+	},
+	"isDiscoverable": true,
+	"areReservationsDiscoverable": false,
+	"isAttendingCustomerManuallyAssignable": false,
+	"status": "Published",
+	"rank": 1,
+	"onsales": [
+		{
+			"id": "00000000-0000-0000-0000-000000000040",
+			"validFrom": "2050-05-01T09:00:00Z",
+			"validTo": "2050-05-09T15:00:00Z",
+			"openToPurchaser": [],
+			"closedToPurchaser": [],
+			"openToAttendee": [],
+			"closedToAttendee": [],
+			"flags": "All",
+			"quotaGroupIds": []
+		}
+	],
+	// TODO: there can be a lot of these - be aware of size
+	"prices": [
+		{
+			"id": "00000000-0000-0000-0000-000000000050",
+			// TODO: embed?
+			"priceCategoryId": "00000000-0000-0000-0000-000000000060",
+			"priceTypeId": "00000000-0000-0000-0000-000000000070",
+			"amount": 100.0,
+			"currency": "GBP",
+			"offers": [
+				{
+					"id": "00000000-0000-0000-0000-000000000300",
+					"priceId": "00000000-0000-0000-0000-000000000050",
+					"validFrom": "2050-05-09T15:00:00Z",
+					"validTo": "2050-05-09T16:00:00Z",
+					"valuesByCurrency": [
+						"GBP100.00"
+					],
+					"openToPurchaser": [
+						// TODO: what to do about tag types? 
+						{
+							"tagTypeId": "00000000-0000-0000-0000-000000000081"
+						}
+					]
+				}
+			]
+		}
+	],
+	"grantableTags": [
+		{
+			"priceId": "00000000-0000-0000-0000-000000000050",
+			"target": "Purchaser",
+			// TODO: what to do about tag types? here and in openTo/closedTo etc everywhere else?
+			"tagTypeId": "00000000-0000-0000-0000-000000000080"
+		}
+	],
+	"grantableCredits": [
+		{
+			"id": "00000000-0000-0000-0000-000000000400",
+			"priceId": "00000000-0000-0000-0000-000000000050",
+			"outsideOfPackageOnly": false,
+			"validFrom": "2050-05-01T09:00:00Z",
+			"validTo": "2050-05-09T15:00:00Z",
+			"openToPurchaser": [],
+			"closedToPurchaser": [],
+			"openToAttendee": [],
+			"closedToAttendee": [],
+			"triggerAction": "Purchase",
+			"targetType": "Purchaser",
+			"currencyCode": "GBP",
+			"amount": 10.0,
+			"delayedTo": null
+		}
+	],
+	"badgeImageUrl": "https://example.com/badge.jpg",
+	"bannerImageUrl": "https://example.com/banner.jpg",
+	"inlineImageUrls": [
+		"https://example.com/image1.jpg"
+	],
+
+	// Event-specific fields
+	// TODO: could make these IDs - but i think v.useful for consumer?
+	"venue": {
+		"id": "00000000-0000-0000-0000-000000000100",
+		"ownerOrganisationId": "00000000-0000-0000-0000-000000000002",
+		"code": "VENUE-001",
+		"name": {
+			"en": "Stadium"
+		},
+		"preferredName": {
+			"en": "Stadium Preferred"
+		},
+		"accessibilityInformation": {
+			"en": "Accessible"
+		},
+		"address": {
+			"line1": "123 Main St",
+			"city": "London",
+			"postcode": "E1 1AA",
+			"country": "UK"
+		},
+		"timezone": "Europe/London"
+	},
+	"appliedVenueConfigurations": [
+		{
+			"type": "Active",
+			"venueConfiguration": {
+				"id": "00000000-0000-0000-0000-000000000110",
+				"name": {
+					"en": "Main Config"
+				}
+			}
+		}
+	],
+	"dateMode": "StartOnly",
+	"start": "2050-05-09T15:00:00Z",
+	"end": "2050-05-09T16:00:00Z",
+	"isLapsed": false,
+	"gatesOpen": [
+		{
+			"id": "00000000-0000-0000-0000-000000000500",
+			"from": "2050-05-09T14:00:00Z",
+			"to": "2050-05-09T15:00:00Z"
+		}
+	],
+	"postingConfigurations": [
+		{
+			"id": "00000000-0000-0000-0000-000000000600",
+			"priceId": "00000000-0000-0000-0000-000000000050",
+			"validFrom": "2050-05-01T09:00:00Z",
+			"validTo": "2050-05-09T15:00:00Z",
+			"openToPurchaser": [],
+			"closedToPurchaser": [],
+			"openToAttendee": [],
+			"closedToAttendee": [],
+			"flags": "All",
+			"forwardingAndDonations": {
+				"passOnPackageDiscount": true,
+				"retainRefundFeeId": null,
+				"donationAccountId": null
+			},
+			"resale": {
+				"sellerFeeId": null,
+				"forceRefundMopId": null
+			}
+		}
+	],
+	"mapMode": "Seats",
+
+	// MembershipType-specific fields
+	"expiry": {
+		"type": "Absolute",
+		"value": "2051-01-01T00:00:00Z"
+	},
+
+	// Package-specific fields
+	// TODO: doubt required for now
+	"componentGroups": [
+		{
+			"id": "00000000-0000-0000-0000-000000000200",
+			"requiredComponentCount": 1,
+			"ratio": 1,
+			"adjustmentId": "00000000-0000-0000-0000-000000000210",
+			"rank": 1,
+			"inventorySearchGroup": {
+				"id": "00000000-0000-0000-0000-000000000220",
+				"searchMode": "IndependentBestAvailable",
+				"componentGroups": []
+			},
+			"possibleComponents": [
+				{
+					"id": "00000000-0000-0000-0000-000000000201",
+					"productId": "00000000-0000-0000-0000-000000000060",
+					"isLapsed": false,
+					"priceCategoryId": "00000000-0000-0000-0000-000000000060",
+					"priceTypeId": "00000000-0000-0000-0000-000000000070"
+				}
+			],
+			"apportionedOffers": [
+				{
+					"packageOfferId": "00000000-0000-0000-0000-000000000230",
+					"apportionedValues": [
+						"GBP100.00"
+					]
+				}
+			]
+		}
+	],
+	"showContents": true,
+	"deliveryMode": "DeliverPackage",
+	"reapportionmentMode": "Proportional",
+	"quotaEvaluationMode": "Both"
+
+	// Remote-specific fields
+	// TODO: remotes do have more fields but less important for now
+}

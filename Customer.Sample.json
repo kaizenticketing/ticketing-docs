@@ -1,0 +1,111 @@
+{
+	// Customer fields
+	"accountId": "00000000-0000-0000-0000-000000000001",
+	"profileId": "00000000-0000-0000-0000-000000000002",
+	"organisationId": "00000000-0000-0000-0000-000000000003",
+	"foreignOrganisationId": "00000000-0000-0000-0000-000000000004",
+	"reference": "CUST0001",
+	"importedReference": "IMP0001",
+	"eMail": "demo.customer@example.com",
+	"forename": "Demo",
+	"surname": "Customer",
+	"initials": "DC",
+	"gender": "Male",
+	"dateOfBirth": "1990-01-01",
+	"company": "DemoCorp",
+	"companyPosition": "Developer",
+	"addresses": [
+		{
+			"id": "00000000-0000-0000-0000-000000000010",
+			"isDefaultBilling": true,
+			"isDefaultDelivery": true,
+			"line1": "123 Test Street",
+			"line2": "Apt 4",
+			"town": "Test Town",
+			"county": "Test County",
+			"postcode": "AA1 2BB"
+		}
+	],
+	"logins": [
+		{
+			"id": "00000000-0000-0000-0000-000000000020",
+			"type": "Local",
+			"username": "demo.customer@example.com",
+			"passwordHash": "HASHEDPASSWORD"
+		},
+		{
+			"id": "00000000-0000-0000-0000-000000000021",
+			"type": "TrustedSso",
+			// TODO: this is OM's ref
+			"username": "https://www.example-club.co.uk/user/13833",
+			"passwordHash": null
+		}
+	],
+	"phoneNumbers": {
+		"mobile": "+4477801234567",
+		"home": null,
+		"work": null
+	},
+	"preferredLanguage": "en-GB",
+	"preferredTimezone": "Europe/London",
+	"ipAddress": "192.168.1.1",
+	"optOutOfAutomatedProcessing": false,
+	"consent": [
+		{
+			"id": "00000000-0000-0000-0000-000000000030",
+			"targetOrganisationId": "00000000-0000-0000-0000-000000000003",
+			"isOptedIn": true,
+			// TODO: embed?
+			"sourceChannelId": "00000000-0000-0000-0000-000000000050",
+			"sourceUserId": "00000000-0000-0000-0000-000000000060"
+		}
+	],
+	"createdByAccountId": "00000000-0000-0000-0000-000000000070",
+	"created": "2020-01-01T12:00:00Z",
+	"updated": "2024-01-01T12:00:00Z",
+	"appliedRestrictions": [
+		{
+			"id": "00000000-0000-0000-0000-000000000080",
+			"type": "Inactive",
+			"reason": "Manual",
+			"applied": "2023-01-01T12:00:00Z",
+			"removed": null,
+			"annotations": {
+				"note": "Manually restricted"
+			}
+		}
+	],
+	"appliedTags": [
+		{
+			"id": "00000000-0000-0000-0000-000000000090",
+			"accountId": "00000000-0000-0000-0000-000000000001",
+			// TODO: embed or not embed? maybe just use name?
+			"tagType": {
+				"id": "00000000-0000-0000-0000-000000000091",
+				"name": "VIP"
+			},
+			"sourceType": "Manual",
+			"sourceId": null,
+			"applied": "2023-01-01T12:00:00Z",
+			"removed": null,
+			"expires": null
+		}
+	],
+	"nextDynamicTagEvaluationTime": "2025-01-01T12:00:00Z",
+	"currentBalances": [
+		{
+			"id": "00000000-0000-0000-0000-000000000110",
+			"accountId": "00000000-0000-0000-0000-000000000001",
+			"createdAt": "2024-01-01T12:00:00Z",
+			"effectiveAt": "2024-01-01T12:00:00Z",
+			"currencyCode": "GBP",
+			"amount": 100.00,
+			"type": "Credit",
+			"description": "Initial balance",
+			"balanceAfter": 100.00,
+			"createdChannelId": "00000000-0000-0000-0000-000000000050",
+			"createdUserId": "00000000-0000-0000-0000-000000000060",
+			"sourceId": null
+		}
+	]
+}

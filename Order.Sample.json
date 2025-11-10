@@ -1,0 +1,181 @@
+// Sample Order JSON DTO
+{
+	"id": "order-uuid-1234",
+	"organisationId": "org-uuid-5678",
+	"createdChannelId": "channel-uuid-9012",
+	"created": "2050-05-09T15:00:00Z",
+	"createdUserId": "user-uuid-3456",
+	"lastChanged": "2050-05-09T15:05:00Z",
+	"purchasingCustomerId": "customer-uuid-7890",
+	"currencyCode": "GBP",
+	"orderReference": "DEMOORDER1",
+	"status": "Complete",
+
+	// --- Order Lines ---
+	"orderLines": [
+		{
+			"id": "orderline-uuid-1",
+			"deliveryId": "delivery-uuid-1",
+			"rank": 1,
+			"type": "Purchased",
+			"productId": "product-uuid-1",
+			// TODO: embed?
+			"priceCategoryId": "pricecat-uuid-1",
+			"priceTypeId": "pricetype-uuid-1",
+			"inventory": {
+				// TODO: need inventory set info + embed segment / hold?
+				"id": "place-uuid-1",
+				"inventorySetId": "invset-uuid-1",
+				"code": "A12",
+				"currentVersion": 2,
+				"productId": "product-uuid-1",
+				"x": 10,
+				"y": 5,
+				"priority": 1,
+				"isLocked": false,
+				"lockedByCartId": null,
+				"lockedAt": null,
+				"status": "Sold",
+				"orderLineId": "orderline-uuid-1",
+				"rowName": "A",
+				"seatName": "12",
+				"ticketNumber": 101,
+				"aisleId": null,
+				"stairId": null,
+				"entranceId": null,
+				"noteIds": []
+			},
+			"componentId": null,
+			"attendingCustomerId": "customer-uuid-7890",
+			"productParticipatedInQuota": false,
+			"itemOnlyValue": "GBP100.00",
+			"value": "GBP100.00",
+			"currentValue": "GBP100.00",
+			"isCancelled": false,
+			"children": [
+				// .. child order lines ..
+			],
+			"appliedAdjustments": [
+				{
+					"id": "adj-uuid-1",
+					// TODO: consume like products?
+					"adjustmentId": "adjtype-uuid-1",
+					"orderLineId": "orderline-uuid-1",
+					"itemValue": "GBP100.00",
+					"isCancelled": false,
+					"isInside": true,
+					"triggeredBy": "Normal"
+				}
+			],
+			"appliedTags": [],
+			"postingStatus": "None",
+			"postedAt": null,
+			"postingRecipientAccountId": null,
+			"postedFromAccountId": null,
+			"postingRefundMopId": null
+		}
+		// ... more order lines ...
+	],
+
+	// --- Applied Order Adjustments ---
+	"appliedOrderAdjustments": [
+		{
+			"id": "adj-uuid-2",
+			// TODO: consume like products?
+			"adjustmentId": "adjtype-uuid-2",
+			"orderLineId": null,
+			"itemValue": "GBP100.00",
+			"isCancelled": false,
+			"isInside": false,
+			"triggeredBy": "Normal"
+		}
+		// ... more adjustments ...
+	],
+
+	// --- Deliveries ---
+	"deliveries": [
+		{
+			"id": "delivery-uuid-1",
+			"fulfillmentOrganisationId": "org-uuid-5678",
+			"rank": 1,
+			// TODO: argument to be made this should be by ID
+			"methodOfDelivery": {
+				"id": "mod-uuid-1",
+				"organisationId": "org-uuid-5678",
+				"name": "Demo Method Of Delivery 1",
+				"description": "Demo delivery method description...",
+				"rank": 1
+			},
+			"targetAccountId": "customer-uuid-7890",
+			"createdAt": "2050-05-09T15:00:00Z",
+			"trackingReference": null,
+			"walletIssueMode": "None",
+			"walletIssueExpiry": null,
+			"storedInstrumentId": null
+		}
+		// ... more deliveries ...
+	],
+
+	// --- Payments and Refunds ---
+	"paymentsAndRefunds": [
+		{
+			"id": "payment-uuid-1",
+			"orderId": "order-uuid-1234",
+			"payingAccountId": "customer-uuid-7890",
+			"createdAt": "2050-05-09T15:00:00Z",
+			"takenAt": "2050-05-09T15:00:00Z",
+			"sequenceNumber": 0,
+			"value": "GBP100.00",
+			// TODO: argument to be made this should be by ID
+			"methodOfPayment": {
+				"id": "mop-uuid-1",
+				"name": "Demo Method of Payment 1",
+				"description": "Demo mop description...",
+				"rank": 0,
+				"isDefault": true
+			},
+			"paymentMethodId": "pm-uuid-1",
+			"description": "Card payment",
+			"fingerprint": "sha1hashbase64",
+			"status": "Complete",
+			"externalPaymentIntentId": "pi_12345",
+			"externalChargeId": "ch_A1234",
+			"receiptDetails": null,
+			"scheduledFor": null,
+			"instalmentsDetails": null,
+			"isTopLevel": true,
+			"hasChildren": false,
+			"parent": null,
+			"children": [],
+			"transferDetails": null
+		}
+		// ... more payments/refunds ...
+	],
+	
+	// --- Transactions ---
+	// TODO: transactions get LARGE - be better to come as a separate feed for finance?
+	//   "transactions": [
+	//     {
+	//       "id": "transaction-uuid-1",
+	//       "created": "2050-05-09T15:00:00Z",
+	//       "sequenceNumber": 1,
+	//       "type": "Sell",
+	//       "channelId": "channel-uuid-9012",
+	//       "userId": "user-uuid-3456",
+	//       "orderLineId": "orderline-uuid-1",
+	//       "appliedAdjustmentId": null,
+	//       "ledgerEntries": [
+	//         {
+	//           "id": "ledgerentry-uuid-1",
+	//           "source": { "organisationId": "org-uuid-5678", "customerAccountId": "customer-uuid-7890" },
+	//           "destination": { "organisationId": "org-uuid-5678", "customerAccountId": null },
+	//           "taxBandId": null,
+	//           "localValue": "GBP100.00",
+	//           "baseValue": "GBP100.00"
+	//         }
+	//       ],
+	//       "annotations": {}
+	//     }
+	// ... more transactions ...
+	//   ]
+}
