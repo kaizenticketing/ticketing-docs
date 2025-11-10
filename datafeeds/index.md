@@ -162,17 +162,17 @@ Currently supported object types:
 
 For `objectType: "customer"` 
 
-* [Customer Schema Sample](datafeeds/Customer.Sample.json)
+* [Customer Schema Sample](Customer.Sample.json)
 
 ### Order Object
 
 For `objectType: "order"` 
 
-* [Order Schema Sample](datafeeds/Order.Sample.json)
+* [Order Schema Sample](Order.Sample.json)
 
 ### Product Object 
 
 For `objectType: "product"`
 
-* [Product Schema Sample](datafeeds/Product.Sample.json)
+* [Product Schema Sample](Product.Sample.json)
 
