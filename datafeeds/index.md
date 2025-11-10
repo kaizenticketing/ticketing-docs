@@ -162,17 +162,17 @@ Currently supported object types:
 
 For `objectType: "customer"` 
 
-* [Customer Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Customer.Sample.json)
+* [Customer Schema Sample](datafeeds/Customer.Sample.json)
 
 ### Order Object
 
 For `objectType: "order"` 
 
-* [Order Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Order.Sample.json)
+* [Order Schema Sample](datafeeds/Order.Sample.json)
 
 ### Product Object 
 
 For `objectType: "product"`
 
-* [Product Schema Sample](https://github.com/kaizenticketing/ticketing-docs/blob/main/Product.Sample.json)
+* [Product Schema Sample](datafeeds/Product.Sample.json)
 

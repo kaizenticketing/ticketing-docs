@@ -36,7 +36,6 @@
 		{
 			"id": "00000000-0000-0000-0000-000000000021",
 			"type": "TrustedSso",
-			// TODO: this is OM's ref
 			"username": "https://www.example-club.co.uk/user/13833",
 			"passwordHash": null
 		}
