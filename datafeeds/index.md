@@ -218,6 +218,14 @@ For objectType: "product"
 * Package
 * Remote
 
+### TagType Object
+
+For objectType: "tagType"
+
+* [TagType Schema Sample](TagType.Sample.json)
+
+**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
+
 **Key concepts:**
 
 * **openToPurchaser & openToAttendee:** Both are collections of tag-based eligibility filters. `openToPurchaser` applies to the purchaser of the order; `openToAttendee` applies to the attendee assigned to a specific order line
