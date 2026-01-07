@@ -133,120 +133,89 @@
 	"inlineImageUrls": [
 		"https://example.com/image1.jpg"
 	],
-
 	// Event-specific fields
 	// TODO: could make these IDs - but i think v.useful for consumer?
-	"venue": {
-		"id": "00000000-0000-0000-0000-000000000100",
-		"ownerOrganisationId": "00000000-0000-0000-0000-000000000002",
-		"code": "VENUE-001",
-		"name": {
-			"en": "Stadium"
+	"event": {
+		"venue": {
+			"id": "00000000-0000-0000-0000-000000000100",
+			"ownerOrganisationId": "00000000-0000-0000-0000-000000000002",
+			"code": "VENUE-001",
+			"name": {
+				"en": "Stadium"
+			},
+			"preferredName": {
+				"en": "Stadium Preferred"
+			},
+			"accessibilityInformation": {
+				"en": "Accessible"
+			},
+			"address": {
+				"line1": "123 Main St",
+				"city": "London",
+				"postcode": "E1 1AA",
+				"country": "UK"
+			},
+			"timezone": "Europe/London"
 		},
-		"preferredName": {
-			"en": "Stadium Preferred"
-		},
-		"accessibilityInformation": {
-			"en": "Accessible"
-		},
-		"address": {
-			"line1": "123 Main St",
-			"city": "London",
-			"postcode": "E1 1AA",
-			"country": "UK"
-		},
-		"timezone": "Europe/London"
-	},
-	"appliedVenueConfigurations": [
-		{
-			"type": "Active",
-			"venueConfiguration": {
-				"id": "00000000-0000-0000-0000-000000000110",
-				"name": {
-					"en": "Main Config"
+		"appliedVenueConfigurations": [
+			{
+				"type": "Active",
+				"venueConfiguration": {
+					"id": "00000000-0000-0000-0000-000000000110",
+					"name": {
+						"en": "Main Config"
+					}
 				}
 			}
-		}
-	],
-	"dateMode": "StartOnly",
-	"start": "2050-05-09T15:00:00Z",
-	"end": "2050-05-09T16:00:00Z",
-	"isLapsed": false,
-	"gatesOpen": [
-		{
-			"id": "00000000-0000-0000-0000-000000000500",
-			"from": "2050-05-09T14:00:00Z",
-			"to": "2050-05-09T15:00:00Z"
-		}
-	],
-	"postingConfigurations": [
-		{
-			"id": "00000000-0000-0000-0000-000000000600",
-			"priceId": "00000000-0000-0000-0000-000000000050",
-			"validFrom": "2050-05-01T09:00:00Z",
-			"validTo": "2050-05-09T15:00:00Z",
-			"openToPurchaser": [],
-			"closedToPurchaser": [],
-			"openToAttendee": [],
-			"closedToAttendee": [],
-			"flags": "All",
-			"forwardingAndDonations": {
-				"passOnPackageDiscount": true,
-				"retainRefundFeeId": null,
-				"donationAccountId": null
-			},
-			"resale": {
-				"sellerFeeId": null,
-				"forceRefundMopId": null
+		],
+		"dateMode": "StartOnly",
+		"start": "2050-05-09T15:00:00Z",
+		"end": "2050-05-09T16:00:00Z",
+		"gatesOpen": [
+			{
+				"id": "00000000-0000-0000-0000-000000000500",
+				"from": "2050-05-09T14:00:00Z",
+				"to": "2050-05-09T15:00:00Z"
 			}
-		}
-	],
+		],
+		"postingConfigurations": [
+			{
+				"id": "00000000-0000-0000-0000-000000000600",
+				"priceId": "00000000-0000-0000-0000-000000000050",
+				"validFrom": "2050-05-01T09:00:00Z",
+				"validTo": "2050-05-09T15:00:00Z",
+				"openToPurchaser": [],
+				"closedToPurchaser": [],
+				"openToAttendee": [],
+				"closedToAttendee": [],
+				"flags": "All",
+				"forwardingAndDonations": {
+					"passOnPackageDiscount": true,
+					"retainRefundFeeId": null,
+					"donationAccountId": null
+				},
+				"resale": {
+					"sellerFeeId": null,
+					"forceRefundMopId": null
+				}
+			}
+		]
+	},
 	"mapMode": "Seats",
-
 	// MembershipType-specific fields
-	"expiry": {
-		"type": "Absolute",
-		"value": "2051-01-01T00:00:00Z"
-	},
-
-	// Package-specific fields
-	// TODO: doubt required for now
-	"componentGroups": [
-		{
-			"id": "00000000-0000-0000-0000-000000000200",
-			"requiredComponentCount": 1,
-			"ratio": 1,
-			"adjustmentId": "00000000-0000-0000-0000-000000000210",
-			"rank": 1,
-			"inventorySearchGroup": {
-				"id": "00000000-0000-0000-0000-000000000220",
-				"searchMode": "IndependentBestAvailable",
-				"componentGroups": []
-			},
-			"possibleComponents": [
-				{
-					"id": "00000000-0000-0000-0000-000000000201",
-					"productId": "00000000-0000-0000-0000-000000000060",
-					"isLapsed": false,
-					"priceCategoryId": "00000000-0000-0000-0000-000000000060",
-					"priceTypeId": "00000000-0000-0000-0000-000000000070"
-				}
-			],
-			"apportionedOffers": [
-				{
-					"packageOfferId": "00000000-0000-0000-0000-000000000230",
-					"apportionedValues": [
-						"GBP100.00"
-					]
-				}
-			]
+	"membershipType": {
+		"expiry": {
+			"type": "Absolute",
+			"value": "2051-01-01T00:00:00Z"
 		}
-	],
-	"showContents": true,
-	"deliveryMode": "DeliverPackage",
-	"reapportionmentMode": "Proportional",
-	"quotaEvaluationMode": "Both"
-
+	},
+	// Package-specific fields
+	"package": {
+		"showContents": true,
+		"deliveryMode": "DeliverPackage",
+		"reapportionmentMode": "Proportional",
+		"quotaEvaluationMode": "Both"
+	}
 	// Remote-specific fields
 	// TODO: remotes do have more fields but less important for now
 }
