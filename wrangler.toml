@@ -1,13 +1,10 @@
 name = "ticketing-docs"
 compatibility_date = "2026-02-09"
-pages_build_output_dir = "_site"
 
-# This tells Cloudflare: "Serve the files in this folder"
 [assets]
 directory = "./_site"
-binding = "ASSETS"
+# binding = "ASSETS"  <-- The offending line is gone.
 
-# This is the magic part that forces the domain connection
 [[routes]]
 pattern = "docs.ktckts.com"
 custom_domain = true
