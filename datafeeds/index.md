@@ -231,3 +231,5 @@ For objectType: "tagType"
 * **openToPurchaser & openToAttendee:** Both are collections of tag-based eligibility filters. `openToPurchaser` applies to the purchaser of the order; `openToAttendee` applies to the attendee assigned to a specific order line
 * **Tag combinations:** Tag conditions can be combined logically using the `openTo` and `closedTo` fields.
 * **flags:** Possible values include: None, Purchase, Reserve, Allocate, ConfirmReservation, ConfirmAllocation, AcceptForwarded, PurchaseFromResale
+
+
