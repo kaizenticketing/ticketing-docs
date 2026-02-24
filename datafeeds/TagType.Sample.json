@@ -4,7 +4,7 @@
 	"type": "Standard",
 	"name": "Season Ticket Holder",
 	"isVisibleToCustomer": true,
-	// Standard-only fields
+	
 	"standard": {
 		"isManualAllowed": true,
 		"expiry": {
@@ -12,5 +12,4 @@
 			"value": "2051-01-01T00:00:00Z"
 		}
 	}
-	// TODO: Dynamic tags
 }
