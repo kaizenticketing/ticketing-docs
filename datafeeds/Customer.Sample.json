@@ -35,8 +35,7 @@
 		{
 			"id": "00000000-0000-0000-0000-000000000021",
 			"type": "TrustedSso",
-			"username": "https://www.example-club.co.uk/user/13833",
-			"passwordHash": null
+			"username": "https://www.example-club.co.uk/user/13833"
 		}
 	],
 	"phoneNumbers": {
@@ -87,7 +86,6 @@
 			"expires": null
 		}
 	],
-	"nextDynamicTagEvaluationTime": "2025-01-01T12:00:00Z",
 	"currentBalances": [
 		{
 			"id": "00000000-0000-0000-0000-000000000110",
