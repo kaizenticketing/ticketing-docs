@@ -76,7 +76,6 @@
 			"rank": 1,
 			"methodOfDelivery": {
 				"id": "mod-uuid-1",
-				"code": "code",
 				"name": "Demo Method Of Delivery 1"
 			},
 			"targetAccountId": "customer-uuid-7890",
@@ -98,7 +97,6 @@
 			"value": "GBP100.00",
 			"methodOfPayment": {
 				"id": "mop-uuid-1",
-				"code": "code",
 				"name": "Demo Method of Payment 1"
 			},
 			"paymentMethodId": "pm-uuid-1",
