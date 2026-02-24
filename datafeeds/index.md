@@ -190,7 +190,6 @@ For objectType: "order"
 
 * [Order Schema Sample](Order.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Key concepts:**
 
@@ -207,7 +206,6 @@ For objectType: "product"
 
 * [Product Schema Sample](Product.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Product types available on the Kaizen platform:**
 
@@ -224,7 +222,6 @@ For objectType: "tagType"
 
 * [TagType Schema Sample](TagType.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Key concepts:**
 
