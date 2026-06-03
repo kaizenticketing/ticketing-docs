@@ -29,8 +29,7 @@
 		{
 			"id": "00000000-0000-0000-0000-000000000020",
 			"type": "Local",
-			"username": "demo.customer@example.com",
-			"passwordHash": "HASHEDPASSWORD"
+			"username": "demo.customer@example.com"
 		},
 		{
 			"id": "00000000-0000-0000-0000-000000000021",
