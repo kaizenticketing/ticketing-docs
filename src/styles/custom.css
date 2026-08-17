@@ -1,0 +1,27 @@
+/* kaizen brand theme, matching www.kaizenticketing.com - Manrope type, brand
+   orange #ff9100 for accents with the darker #d87a00 carrying link text in
+   light mode (the bright orange fails contrast on white) */
+
+:root {
+	--sl-font: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+	/* dark mode accents - the bright brand orange reads well on dark */
+	--sl-color-accent-low: #46270a;
+	--sl-color-accent: #ff9100;
+	--sl-color-accent-high: #ffc887;
+}
+
+:root[data-theme="light"] {
+	/* light mode accents - darker orange for text, warm tint for fills */
+	--sl-color-accent-low: #fff7ef;
+	--sl-color-accent: #d87a00;
+	--sl-color-accent-high: #7a4500;
+
+	--sl-color-text: #313131;
+	--sl-color-white: #313131;
+}
+
+/* headings carry the corporate site's heavier cut */
+h1, h2, h3, h4, .site-title {
+	font-weight: 800;
+}

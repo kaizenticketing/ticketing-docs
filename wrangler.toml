@@ -2,8 +2,7 @@ name = "ticketing-docs"
 compatibility_date = "2026-02-09"
 
 [assets]
-directory = "./_site"
-# binding = "ASSETS"  <-- The offending line is gone.
+directory = "./dist"
 
 [[routes]]
 pattern = "docs.ktckts.com"
