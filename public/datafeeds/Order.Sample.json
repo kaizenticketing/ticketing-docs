@@ -1,4 +1,3 @@
-// Sample Order JSON DTO
 {
 	"id": "order-uuid-1234",
 	"organisationId": "org-uuid-5678",
@@ -10,8 +9,7 @@
 	"currencyCode": "GBP",
 	"orderReference": "DEMOORDER1",
 	"status": "Complete",
-
-	// --- Order Lines ---
+	
 	"orderLines": [
 		{
 			"id": "orderline-uuid-1",
@@ -49,7 +47,6 @@
 			"currentValue": "GBP100.00",
 			"isCancelled": false,
 			"children": [
-				// .. child order lines ..
 			],
 			"appliedAdjustments": [
 				{
@@ -63,10 +60,8 @@
 			"postedFromAccountId": null,
 			"postingRefundMopId": null
 		}
-		// ... more order lines ...
 	],
 
-	// --- Applied Order Adjustments ---
 	"appliedOrderAdjustments": [
 		{
 			"adjustmentId": "adjtype-uuid-2",
@@ -74,16 +69,13 @@
 		}
 	],
 
-	// --- Deliveries ---
 	"deliveries": [
 		{
 			"id": "delivery-uuid-1",
 			"fulfillmentOrganisationId": "org-uuid-5678",
 			"rank": 1,
-			// TODO: argument to be made this should be by ID
 			"methodOfDelivery": {
 				"id": "mod-uuid-1",
-				"code": "code",
 				"name": "Demo Method Of Delivery 1"
 			},
 			"targetAccountId": "customer-uuid-7890",
@@ -95,7 +87,6 @@
 		}
 	],
 
-	// --- Payments and Refunds ---
 	"paymentsAndRefunds": [
 		{
 			"id": "payment-uuid-1",
@@ -106,7 +97,6 @@
 			"value": "GBP100.00",
 			"methodOfPayment": {
 				"id": "mop-uuid-1",
-				"code": "code",
 				"name": "Demo Method of Payment 1"
 			},
 			"paymentMethodId": "pm-uuid-1",

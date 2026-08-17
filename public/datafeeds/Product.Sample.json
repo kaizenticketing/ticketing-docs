@@ -1,10 +1,8 @@
 {
-	// Common fields
 	"id": "00000000-0000-0000-0000-000000000001",
 	"organisationId": "00000000-0000-0000-0000-000000000002",
 	"type": "Event",
 	"code": "EVT-001",
-	// TODO: ok with these being embedded?
 	"attractions": [
 		{
 			"id": "00000000-0000-0000-0000-000000000010",
@@ -74,11 +72,12 @@
 			"quotaGroupIds": []
 		}
 	],
-	// TODO: there can be a lot of these - be aware of size
+
+	
 	"prices": [
 		{
 			"id": "00000000-0000-0000-0000-000000000050",
-			// TODO: embed?
+
 			"priceCategoryId": "00000000-0000-0000-0000-000000000060",
 			"priceTypeId": "00000000-0000-0000-0000-000000000070",
 			"amount": 100.0,
@@ -93,7 +92,6 @@
 						"GBP100.00"
 					],
 					"openToPurchaser": [
-						// TODO: what to do about tag types? 
 						{
 							"tagTypeId": "00000000-0000-0000-0000-000000000081"
 						}
@@ -106,7 +104,6 @@
 		{
 			"priceId": "00000000-0000-0000-0000-000000000050",
 			"target": "Purchaser",
-			// TODO: what to do about tag types? here and in openTo/closedTo etc everywhere else?
 			"tagTypeId": "00000000-0000-0000-0000-000000000080"
 		}
 	],
@@ -133,8 +130,7 @@
 	"inlineImageUrls": [
 		"https://example.com/image1.jpg"
 	],
-	// Event-specific fields
-	// TODO: could make these IDs - but i think v.useful for consumer?
+	
 	"event": {
 		"venue": {
 			"id": "00000000-0000-0000-0000-000000000100",
@@ -202,20 +198,18 @@
 		]
 	},
 	"mapMode": "Seats",
-	// MembershipType-specific fields
+	
 	"membershipType": {
 		"expiry": {
 			"type": "Absolute",
 			"value": "2051-01-01T00:00:00Z"
 		}
 	},
-	// Package-specific fields
+	
 	"package": {
 		"showContents": true,
 		"deliveryMode": "DeliverPackage",
 		"reapportionmentMode": "Proportional",
 		"quotaEvaluationMode": "Both"
 	}
-	// Remote-specific fields
-	// TODO: remotes do have more fields but less important for now
 }

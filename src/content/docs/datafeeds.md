@@ -132,6 +132,10 @@ Because of our **at-least-once delivery** guarantee, you may receive the same ev
 
 **Retention of idempotency keys:** You only need to retain idempotencyKey values for as long as retries are possible (at least 7 days - see [Retention Period](#retention-period)). After that, the risk of receiving duplicates is negligible.
 
+### Handling out-of-order delivery 
+Because events can be retried and replayed, you may ocassionally recieve an older event after you've already processed a more recent one for the same object. To guard against overwriting newer data with a stale update, compare the incoming **publishedAt** timestamp against the **publishedAt** value you have stored for that **objectId**. If the incoming event is older, discard it and return 200. 
+
+
 ## Security and Shared Secret
 
 **Critical: You must verify the webhook signature to ensure requests genuinely come from Kaizen.**
@@ -190,7 +194,6 @@ For objectType: "order"
 
 * [Order Schema Sample](/datafeeds/Order.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Key concepts:**
 
@@ -207,7 +210,6 @@ For objectType: "product"
 
 * [Product Schema Sample](/datafeeds/Product.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Product types available on the Kaizen platform:**
 
@@ -224,10 +226,11 @@ For objectType: "tagType"
 
 * [TagType Schema Sample](/datafeeds/TagType.Sample.json)
 
-**Note:** This schema is much further away from being finalised. Feedback is being requested at this stage.
 
 **Key concepts:**
 
 * **openToPurchaser & openToAttendee:** Both are collections of tag-based eligibility filters. `openToPurchaser` applies to the purchaser of the order; `openToAttendee` applies to the attendee assigned to a specific order line
 * **Tag combinations:** Tag conditions can be combined logically using the `openTo` and `closedTo` fields.
 * **flags:** Possible values include: None, Purchase, Reserve, Allocate, ConfirmReservation, ConfirmAllocation, AcceptForwarded, PurchaseFromResale
+
+

@@ -1,5 +1,4 @@
 {
-	// Customer fields
 	"accountId": "00000000-0000-0000-0000-000000000001",
 	"profileId": "00000000-0000-0000-0000-000000000002",
 	"organisationId": "00000000-0000-0000-0000-000000000003",
@@ -30,14 +29,12 @@
 		{
 			"id": "00000000-0000-0000-0000-000000000020",
 			"type": "Local",
-			"username": "demo.customer@example.com",
-			"passwordHash": "HASHEDPASSWORD"
+			"username": "demo.customer@example.com"
 		},
 		{
 			"id": "00000000-0000-0000-0000-000000000021",
 			"type": "TrustedSso",
-			"username": "https://www.example-club.co.uk/user/13833",
-			"passwordHash": null
+			"username": "https://www.example-club.co.uk/user/13833"
 		}
 	],
 	"phoneNumbers": {
@@ -54,7 +51,6 @@
 			"id": "00000000-0000-0000-0000-000000000030",
 			"targetOrganisationId": "00000000-0000-0000-0000-000000000003",
 			"isOptedIn": true,
-			// TODO: embed?
 			"sourceChannelId": "00000000-0000-0000-0000-000000000050",
 			"sourceUserId": "00000000-0000-0000-0000-000000000060"
 		}
@@ -78,7 +74,6 @@
 		{
 			"id": "00000000-0000-0000-0000-000000000090",
 			"accountId": "00000000-0000-0000-0000-000000000001",
-			// TODO: embed or not embed? maybe just use name?
 			"tagType": {
 				"id": "00000000-0000-0000-0000-000000000091",
 				"name": "VIP"
@@ -90,7 +85,6 @@
 			"expires": null
 		}
 	],
-	"nextDynamicTagEvaluationTime": "2025-01-01T12:00:00Z",
 	"currentBalances": [
 		{
 			"id": "00000000-0000-0000-0000-000000000110",
