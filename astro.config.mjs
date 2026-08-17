@@ -7,6 +7,13 @@ export default defineConfig({
 		starlight({
 			title: "Kaizen Ticketing",
 			description: "Guides for partners who integrate with the Kaizen Ticketing platform.",
+			logo: {
+				light: "./src/assets/kaizen-logo.png",
+				dark: "./src/assets/kaizen-logo-dark.png",
+				replacesTitle: true,
+				alt: "Kaizen Ticketing",
+			},
+			favicon: "/favicon.png",
 			customCss: ["./src/styles/custom.css"],
 			head: [
 				{ tag: "link", attrs: { rel: "preconnect", href: "https://fonts.googleapis.com" } },

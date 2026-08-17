@@ -4,7 +4,7 @@ description: Data files written to a private Google Cloud Storage folder for you
 ---
 
 
-Welcome, and thanks for working with us. This guide should give your technical team everything they need to start collecting data files from us. If anything here is unclear, or you would like us to set things up differently, just ask - we are happy to adjust.
+Welcome, and thanks for working with us. This guide should give your technical team everything they need to start collecting data files from us. If anything here is unclear, or you would like us to set things up differently, just ask.
 
 ## The short version
 
