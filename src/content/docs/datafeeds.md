@@ -11,9 +11,14 @@ We expose a near-real-time outbound data feed over webhooks. When things change 
 
 Initially, we're focusing on the customer object type, with more objects added over time.
 
-## What we need from you
+## Getting Started
 
-To consume the feed, we'll need:
+1. Give us a publicly reachable HTTPS URL to POST events to
+2. Generate a random shared secret and share it with us securely
+3. Build an endpoint that returns a fast 2xx and verifies our signature
+
+## Detailed Requirements
+To consume the feed effectively, please ensure the following technical requirements are met:
 
 ### 1. Provide a webhook URL
 
